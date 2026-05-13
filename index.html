@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ZeroNetz - Manage your students efficiently </title>
+ 
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LANDING PAGE -->
+  <div id="landingPage" class="landing">
+     <h1 class="brand-name">ZeroNetz</h1>
+    <h1>Welcome to Student Management System</h1>
+
+    <p>Manage your students efficiently</p>
+
+    <button onclick="goToLogin()">Enter</button>
+  </div>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginBox" class="login-box" style="display: none;">
+
+    <h2>Enter Username & Password</h2>
+
+    <input type="text" id="loginUser" placeholder="Username">
+
+<div class="password-wrapper">
+
+    <input type="password" id="loginPass" placeholder="Password">
+
+    <span class="toggle-password"
+    onclick="togglePassword()">
+        👁
+    </span>
+
+</div>
+
+<div class="remember-box">
+    <input type="checkbox" id="rememberMe">
+    <label for="rememberMe">Remember Me</label>
+</div>
+
+    <button id="loginBtn">Login</button>
+
+  </div>
+
+  <!-- MAIN APP -->
+  <div class="container" id="mainApp" style="display: none;">
+
+    <h1>Student Management System</h1>
+
+    <div class="buttons">
+
+      <button onclick="openAddModal()">
+        Add Student
+      </button>
+
+      <button onclick="showStudents()">
+        Show All Students
+      </button>
+
+      <button onclick="openSearchModal()">
+        Search Student
+      </button>
+
+      <button onclick="sortStudents()">
+        Sort by CGPA
+      </button>
+
+      <button class="danger" onclick="deleteAll()">
+        Delete All
+      </button>
+
+    </div>
+
+    <div id="output"></div>
+
+  </div>
+
+  <!-- ADD MODAL -->
+  <div id="addModal" class="modal">
+
+    <div class="modal-content">
+
+      <h2>Add Student</h2>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter Name"
+      />
+
+      <input
+        type="text"
+        id="id"
+        placeholder="Enter ID"
+      />
+
+      <input
+        type="number"
+        id="cgpa"
+        step="0.01"
+        placeholder="Enter CGPA"
+      />
+
+      <div class="modal-buttons">
+
+        <button onclick="addStudent()">
+          Add
+        </button>
+
+        <button onclick="closeAddModal()">
+          Cancel
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="modal">
+
+    <div class="modal-content">
+
+      <h2>Search Student</h2>
+
+      <input
+        type="text"
+        id="searchID"
+        placeholder="Enter Name or ID"
+      />
+
+      <div class="modal-buttons">
+
+        <button onclick="searchStudent()">
+          Search
+        </button>
+
+        <button onclick="closeSearchModal()">
+          Cancel
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TOAST -->
+  <div id="toastContainer"></div>
+
+  <!-- FOOTER -->
+  <footer>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=zerosec.net@gmail.com" target="_blank">
+    Contact Us : contact@zeronetz.com
+</a>
+    <br>
+
+    Developed by - Richard Mitnick
+    <br>
+    Powered by - Emizen Tech 
+    <br> DMCA PROTECTED
+    <br>Privacy Policy | Terms & Conditions
+
+    <br>Copyright © 1969-2027 Zeronetz - All Rights Reserved
+    
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

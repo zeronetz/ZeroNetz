@@ -1,0 +1,579 @@
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   LANDING PAGE
+========================= */
+.landing {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: calc(100vh - 80px);
+
+  text-align: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  position: relative;
+}
+
+/* BRAND TITLE */
+.brand-name{
+  position: absolute;
+
+  top: 40px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 64px;
+
+  font-weight: 700;
+
+  color: #e53935;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+
+  margin: 0;
+
+  text-align: center;
+}
+
+/* LANDING CONTENT */
+.landing-content{
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+.landing-content h1,
+.landing-content p {
+  margin: 8px 0;
+}
+
+.landing button {
+  padding: 12px 28px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #3498db;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.landing button:hover {
+  background-color: #2980b9;
+
+  transform: scale(1.05);
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-box {
+  width: 90%;
+  max-width: 320px;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -60%);
+}
+
+.login-box h2 {
+  margin-top: 0;
+}
+
+.login-box input {
+  width: 100%;
+
+  padding: 10px;
+
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+  margin-bottom: 10px;
+
+  box-sizing: border-box;
+}
+
+/* PASSWORD SHOW BUTTON */
+.password-wrapper{
+  position: relative;
+
+  width: 100%;
+}
+
+.password-wrapper input{
+  width: 100%;
+
+  padding-right: 42px;
+
+  margin-bottom: 10px;
+}
+
+.toggle-password{
+  position: absolute;
+
+  right: 14px;
+  top: 36%;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  color: #666;
+
+  user-select: none;
+}
+
+.login-box button {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #3498db;
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #2980b9;
+}
+
+/* =========================
+   REMEMBER ME FIX
+========================= */
+.remember-box{
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 5px;
+  margin-bottom: 12px;
+
+  text-align: left;
+}
+
+.remember-box input[type="checkbox"]{
+  width: 14px !important;
+  height: 14px !important;
+
+  margin: 0 6px 0 0 !important;
+
+  padding: 0 !important;
+
+  flex: none;
+}
+
+.remember-box label{
+  font-size: 13px;
+
+  color: #555;
+
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN APP
+========================= */
+.container {
+  width: calc(100% - 20px);
+
+  max-width: 900px;
+
+  background-color: white;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  box-sizing: border-box;
+
+  overflow-x: auto;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -60%);
+
+  max-height: calc(100vh - 140px);
+
+  overflow-y: auto;
+}
+
+h1 {
+  text-align: center;
+
+  color: #333;
+
+  font-size: 24px;
+
+  margin-top: 0;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #3498db;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.danger {
+  background-color: #e74c3c;
+}
+
+.danger:hover {
+  background-color: #c0392b;
+}
+
+/* =========================
+   TABLE
+========================= */
+#output {
+  overflow-x: auto;
+
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+
+  padding: 8px;
+
+  text-align: left;
+
+  font-size: 14px;
+}
+
+th {
+  background-color: #3498db;
+
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* =========================
+   MODALS
+========================= */
+.modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: white;
+
+  width: 90%;
+  max-width: 320px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  box-sizing: border-box;
+}
+
+.modal-content h2,
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content input {
+  width: 100%;
+
+  padding: 8px;
+
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  box-sizing: border-box;
+}
+
+.modal-buttons button {
+  margin: 5px;
+}
+
+/* =========================
+   TOAST
+========================= */
+#toastContainer {
+  position: fixed;
+
+  top: 15px;
+  right: 15px;
+
+  z-index: 9999;
+}
+
+.toast {
+  background-color: #333;
+
+  color: white;
+
+  padding: 10px 16px;
+
+  margin-top: 10px;
+
+  border-radius: 5px;
+
+  opacity: 0.95;
+
+  font-size: 14px;
+
+  animation:
+    slidein 0.5s,
+    fadeout 0.5s 2.5s forwards;
+}
+
+.toast.success {
+  background-color: #2ecc71;
+}
+
+.toast.error {
+  background-color: #e74c3c;
+}
+
+.toast.info {
+  background-color: #3498db;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  position: fixed;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  padding: 8px 0;
+
+  background-color: #f5f5f5;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  border-top: 1px solid #ddd;
+}
+
+footer hr {
+  display: none;
+}
+
+footer a{
+  color:#3498db;
+
+  text-decoration:none;
+
+  font-weight:bold;
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+
+  .brand-name{
+    top: 30px;
+
+    font-size: 42px;
+  }
+
+  .landing-content h1 {
+    font-size: 24px;
+  }
+
+  .landing-content p {
+    font-size: 14px;
+  }
+
+  .login-box {
+    width: 92%;
+
+    padding: 15px;
+
+    transform: translate(-50%, -58%);
+  }
+
+  .container {
+    width: 94%;
+
+    padding: 12px;
+
+    max-height: calc(100vh - 120px);
+
+    transform: translate(-50%, -58%);
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 8px 12px;
+
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+
+    padding: 6px;
+
+    word-break: break-word;
+  }
+
+  .toast {
+    font-size: 13px;
+  }
+}
